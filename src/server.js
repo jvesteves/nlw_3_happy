@@ -6,6 +6,8 @@ const pages = require('./pages.js')
 //starting express
 const server = express()
 server
+
+.use(express.urlencoded({extended: true}))
 .use(express.static("public"))
 
 //config template engine
@@ -17,5 +19,6 @@ server
 .get("/orphanage", pages.orphanage)
 .get("/orphanages", pages.orphanages)
 .get("/create-orphanage", pages.createOrphanage)
+.post('/save-orphanage', pages.saveOrphanage)
 // server on
 server.listen(5500)

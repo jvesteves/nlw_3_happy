@@ -81,3 +81,12 @@ function toggleSelect(event) {
 
   input.value = button.dataset.value;
 }
+
+/* Desafio
+function validate(event) {
+  if(needsLatAndLng){
+  event.preventDefault();
+  alert('Selecione um ponto no mapa!')
+  }
+}
+*/
